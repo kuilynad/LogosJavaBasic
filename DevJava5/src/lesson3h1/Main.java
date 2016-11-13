@@ -11,8 +11,8 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		//BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	    
-	    System.out.println("Inpun first num");
-	    //double a = Double.parseDouble(reader.readLine());
+	    	System.out.println("Inpun first num");
+	    	//double a = Double.parseDouble(reader.readLine());
 		double a = sc.nextDouble();
 		
 		System.out.println("Operator");
