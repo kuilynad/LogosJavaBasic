@@ -1,18 +1,27 @@
 package lesson3h1;
 
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Main {
 
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Inpun first num");
+		//BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+	    
+	    System.out.println("Inpun first num");
+	    //double a = Double.parseDouble(reader.readLine());
 		double a = sc.nextDouble();
+		
 		System.out.println("Operator");
 		String op = sc.next();
+		//String op = reader.readLine();
+		
 		System.out.println("Inpun second num");
 		double b = sc.nextDouble();
+		//double b = Double.parseDouble(reader.readline());
 		
 		System.out.print("Calculate number is: ");
 
