@@ -8,8 +8,8 @@ public class Main {
 		// task2();
 		//task3();
 		//task4();
-		//task5();
-		task6();
+		task5();
+		//task6();
 		//task7();
 		//task8();
 		//task9();
@@ -60,6 +60,7 @@ public class Main {
 		System.out.println(j);
 	}
 	
+	
 	public static void task4() {
 		int[] array = new int[8];
 		for (int i = 0; i < array.length; i++) {
@@ -76,6 +77,44 @@ public class Main {
 			System.out.print(array[i] + " ");
 		}
 	}
+	
+	
+	public static void task5() {
+		int[] array1 = new int[5];
+		int[] array2 = new int[5];
+		int sum1 = 0, sum2 = 0;
+		double a1 , a2;
+		for (int i = 0; i < array1.length; i++) {
+			array1[i] = (int)(Math.random()*6);
+			array2[i] = (int)(Math.random()*6);			
+		}
+		for (int i = 0; i < array1.length; i++) {
+			System.out.print(array1[i]+" ");
+		}
+		System.out.println();
+		for (int i = 0; i < array2.length; i++) {
+			System.out.print(array2[i]+" ");
+		}
+		for (int i = 0; i < array1.length; i++) {
+			sum1 += array1[i];
+		}
+		for (int i = 0; i < array2.length; i++) {
+			sum2 += array2[i];
+		}
+		System.out.println();
+		a1 = (double)sum1/5;
+		a2 = (double)sum2/5;
+		if (a1>a2){
+			System.out.println("Arithmetic mean of first array is bigger");
+		}
+		else if (a1<a2) {
+			System.out.println("Arithmetic mean of second array is bigger");
+		}
+		else {
+			System.out.println("Arithmetic mean of both arrays is the same");
+		}
+	}
+	
 	
 	public static void task6() {
 		int[] array = new int[4];
