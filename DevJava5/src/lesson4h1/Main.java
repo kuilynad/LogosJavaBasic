@@ -11,9 +11,9 @@ public class Main {
 		// task5();
 		// task6();
 		// task7();
-		task8();
+		// task8();
 		// task9();
-		// task10();
+		task10();
 	}
 
 	public static void task1() {
@@ -120,7 +120,7 @@ public class Main {
 		int j = 0;
 		for (int i = 0; i < array.length; i++) {
 			array[i] = (int) (Math.random() * 31 - 15);
-			System.out.println(array[i] + " ");
+			System.out.print(array[i] + " ");
 		}
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] >= max) {
@@ -130,5 +130,57 @@ public class Main {
 		}
 		System.out.println("Max element of array is: " + array[j]);
 		System.out.println("Index of last element is: " + j);
+	}
+
+	public static void task9() {
+		int[] array1 = new int[10];
+		int[] array2 = new int[10];
+		double[] array3 = new double[10];
+		int j = 0;
+		for (int i = 0; i < array1.length; i++) {
+			array1[i] = (int) (Math.random() * 9 + 1);
+			array2[i] = (int) (Math.random() * 9 + 1);
+			array3[i] = (double) array1[i] / array2[i];
+			System.out.print(array1[i] + " ");
+		}
+		System.out.println();
+		for (int i = 0; i < array2.length; i++) {
+			System.out.print(array2[i] + " ");
+		}
+		System.out.println();
+		for (int i = 0; i < array3.length; i++) {
+			System.out.print(array3[i] + " ");
+			if (array3[i] % 1 == 0) {
+				j++;
+			}
+		}
+		System.out.println();
+		System.out.println("Count full elements in array3 = " + j);
+	}
+
+	public static void task10() {
+		int[] array = new int[11];
+		int a = 0, b = 0, c = 0;
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) (Math.random() * 4 - 2);
+			System.out.print(array[i] + " ");
+		}
+		System.out.println();
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == -1) {
+				a++;
+			} else if (array[i] == 0) {
+				b++;
+			} else {
+				c++;
+			}
+		}
+		if (a > b && a > c) {
+			System.out.println("Item -1 found " + a + " times.");
+		} else if (b > a && b > c) {
+			System.out.println("Item 0 found " + b + " times.");
+		} else if (c > a && c > b) {
+			System.out.println("Item 1 found " + c + " times.");
+		}
 	}
 }
