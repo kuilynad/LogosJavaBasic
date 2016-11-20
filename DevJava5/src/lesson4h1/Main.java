@@ -6,16 +6,15 @@ public class Main {
 
 		// task1();
 		// task2();
-		//task3();
-		//task4();
-		task5();
-		//task6();
-		//task7();
-		//task8();
-		//task9();
-		//task10();
+		// task3();
+		// task4();
+		// task5();
+		// task6();
+		// task7();
+		// task8();
+		// task9();
+		task10();
 	}
-
 
 	public static void task1() {
 		int[] array = new int[10];
@@ -31,7 +30,6 @@ public class Main {
 		}
 	}
 
-
 	public static void task2() {
 		int[] array = new int[50];
 		for (int i = 0, n = 1; i < array.length; n += 2, i++) {
@@ -43,12 +41,11 @@ public class Main {
 		}
 	}
 
-	
 	public static void task3() {
 		int[] array = new int[15];
 		int j = 0;
 		for (int i = 0; i < array.length; i++) {
-			array[i] = (int)(Math.random()*10);
+			array[i] = (int) (Math.random() * 10);
 		}
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] % 2 == 0) {
@@ -59,84 +56,131 @@ public class Main {
 		System.out.println();
 		System.out.println(j);
 	}
-	
-	
+
 	public static void task4() {
 		int[] array = new int[8];
 		for (int i = 0; i < array.length; i++) {
-			array[i] = (int)(Math.random()*10 + 1);
+			array[i] = (int) (Math.random() * 10 + 1);
 		}
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
 		}
 		System.out.println();
 		for (int i = 0; i < array.length; i++) {
-			if (i%2 == 0) {
+			if (i % 2 == 0) {
 				array[i] = 0;
 			}
 			System.out.print(array[i] + " ");
 		}
 	}
-	
-	
-	public static void task5() {
-		int[] array1 = new int[5];
-		int[] array2 = new int[5];
-		int sum1 = 0, sum2 = 0;
-		double a1 , a2;
-		for (int i = 0; i < array1.length; i++) {
-			array1[i] = (int)(Math.random()*6);
-			array2[i] = (int)(Math.random()*6);			
-		}
-		for (int i = 0; i < array1.length; i++) {
-			System.out.print(array1[i]+" ");
-		}
-		System.out.println();
-		for (int i = 0; i < array2.length; i++) {
-			System.out.print(array2[i]+" ");
-		}
-		for (int i = 0; i < array1.length; i++) {
-			sum1 += array1[i];
-		}
-		for (int i = 0; i < array2.length; i++) {
-			sum2 += array2[i];
-		}
-		System.out.println();
-		a1 = (double)sum1/5;
-		a2 = (double)sum2/5;
-		if (a1>a2){
-			System.out.println("Arithmetic mean of first array is bigger");
-		}
-		else if (a1<a2) {
-			System.out.println("Arithmetic mean of second array is bigger");
-		}
-		else {
-			System.out.println("Arithmetic mean of both arrays is the same");
-		}
-	}
-	
-	
+
 	public static void task6() {
 		int[] array = new int[4];
 		int flag;
 		flag = 0;
-		for(int i=0; i<array.length; i++){
-			array[i] = (int)(Math.random()*89+10);
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) (Math.random() * 89 + 10);
 		}
-		for(int i=0; i<array.length; i++) {
-			System.out.print(array[i]+" ");
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
 		}
 		System.out.println();
-		for(int i=0; i<array.length-1; i++) {
-			if(array[i]>array[i+1]) {
+		for (int i = 0; i < array.length - 1; i++) {
+			if (array[i] > array[i + 1]) {
 				flag = 1;
 				break;
 			}
 		}
-		if(flag==1) {
+		if (flag == 1) {
 			System.out.println("NOT strictly increasing sequence");
 		} else {
 			System.out.println("Strictly increasing sequence");
+		}
+	}
+
+	public static void task7() {
+		int[] array = new int[20];
+		for (int i = 0, n1 = 1, n2 = 1; i < array.length; i++) {
+			if (i % 2 == 0) {
+				n1 = n1 + n2;
+				array[i] = n1;
+			} else {
+				n2 = n1 + n2;
+				array[i] = n2;
+			}
+		}
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+	}
+
+	public static void task8() {
+		int[] array = new int[12];
+		int max = 0;
+		int j = 0;
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) (Math.random() * 31 - 15);
+			System.out.print(array[i] + " ");
+		}
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] >= max) {
+				max = array[i];
+				j = i;
+			}
+		}
+		System.out.println("Max element of array is: " + array[j]);
+		System.out.println("Index of last element is: " + j);
+	}
+
+	public static void task9() {
+		int[] array1 = new int[10];
+		int[] array2 = new int[10];
+		double[] array3 = new double[10];
+		int j = 0;
+		for (int i = 0; i < array1.length; i++) {
+			array1[i] = (int) (Math.random() * 9 + 1);
+			array2[i] = (int) (Math.random() * 9 + 1);
+			array3[i] = (double) array1[i] / array2[i];
+			System.out.print(array1[i] + " ");
+		}
+		System.out.println();
+		for (int i = 0; i < array2.length; i++) {
+			System.out.print(array2[i] + " ");
+		}
+		System.out.println();
+		for (int i = 0; i < array3.length; i++) {
+			System.out.print(array3[i] + " ");
+			if (array3[i] % 1 == 0) {
+				j++;
+			}
+		}
+		System.out.println();
+		System.out.println("Count full elements in array3 = " + j);
+	}
+
+	public static void task10() {
+		int[] array = new int[11];
+		int a = 0, b = 0, c = 0;
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) (Math.random() * 4 - 2);
+			System.out.print(array[i] + " ");
+		}
+		System.out.println();
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == -1) {
+				a++;
+			} else if (array[i] == 0) {
+				b++;
+			} else {
+				c++;
+			}
+		}
+		if (a > b && a > c) {
+			System.out.println("Item -1 found " + a + " times.");
+		} else if (b > a && b > c) {
+			System.out.println("Item 0 found " + b + " times.");
+		} else if (c > a && c > b) {
+			System.out.println("Item 1 found " + c + " times.");
 		}
 	}
 }
