@@ -1,71 +1,120 @@
 package core.less7h;
- 
-import java.util.ArrayList; 
-import java.util.Collection; 
-import java.util.List; 
-import java.util.Scanner; 
 
-import core.less7h.Body; 
-import core.less7h.SteeringWheel; 
-import core.less7h.Wheel; 
-import core.less7h.Car.*; 
-import core.less7h.Engine.*; 
-import core.less7h.Engine2.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Scanner;
 
-public class Main { 
+import core.less5h.Body;
+import core.less5h.Car;
+import core.less5h.SteeringWheel;
+import core.less5h.Wheel;
 
-public static void main(String[] args) { 
-	
+public class Main {
 
-//Car car1 = new Car("Ferrari", new Body("Red"), new SteeringWheel(16), new Wheel(16, 4)); 
-//Car car2 = new Car("BMW", new Body("Red"), new SteeringWheel(16), new Wheel(16, 4)); 
-//Car car3 = new Car("Ford", new Body("Red"), new SteeringWheel(16), new Wheel(16, 5)); 
-//Car car4 = new Car("BMW", new Body("Black"), new SteeringWheel(16), new Wheel(15, 4)); 
-//Car car5 = new Car("Ford", new Body("Black"), new SteeringWheel(16), new Wheel(15, 4)); 
-//Car car6 = new Car("Ferrari", new Body("Black"), new SteeringWheel(15), new Wheel(15 ,4)); 
-//Car car7 = new Car("BMW", new Body("Green"), new SteeringWheel(15), new Wheel(15 ,5)); 
-//Car car8 = new Car("Ford", new Body("Green"), new SteeringWheel(15), new Wheel(17 ,5)); 
-//
-//List<Car> list = new ArrayList<>(); 
-//list.add(car1); 
-//list.add(car2); 
-//list.add(car3); 
-//list.add(car4); 
-//list.add(car5); 
-//list.add(car6); 
-//list.add(car7); 
-//list.add(car8); 
+	private static final List<Car> list = new ArrayList<>();
+	private static final Scanner sc = new Scanner(System.in);
 
+	public static void main(String[] args) {
+		list.add(new Car("Ferarri", new Body("red", "alum"), new Wheel(4, 21), new SteeringWheel(5, "black", true)));
+		list.add(new Car("Mclaren", new Body("orange", "alum"), new Wheel(4, 20), new SteeringWheel(4, "gray", true)));
+		list.add(new Car("BMW", new Body("yellow", "steel"), new Wheel(4, 18), new SteeringWheel(5, "black", false)));
+		list.add(new Car("Koenisegg", new Body("white", "carbon"), new Wheel(4, 22),
+				new SteeringWheel(3, "white", true)));
+		list.add(new Car("Pagani", new Body("grey", "carbon"), new Wheel(4, 21), new SteeringWheel(6, "gray", true)));
+		list.add(new Car("Porshe", new Body("silver", "alum"), new Wheel(4, 19), new SteeringWheel(3, "black", false)));
+		list.add(new Car("Lamborgini", new Body("purple", "alum"), new Wheel(4, 20),
+				new SteeringWheel(4, "white", true)));
+		list.add(
+				new Car("Mersedes", new Body("black", "alum"), new Wheel(4, 18), new SteeringWheel(3, "brown", false)));
+		list.add(new Car("Nissan", new Body("blue", "steel"), new Wheel(4, 17), new SteeringWheel(2, "black", true)));
+		list.add(new Car("Mitsubishi", new Body("green", "steel"), new Wheel(4, 16),
+				new SteeringWheel(5, "black", false)));
 
-//list.forEach(System.out::println); 
-//list.contains(Car.containsVendor.equals==BMW);
-Scanner sc = new Scanner(System.in);
-System.out.println("Enter 1 to show other colors");
-System.out.println("Enter 2 to show color and streeingwheel");
-System.out.println("Enter 3 have everising");
-System.out.println("Enter 4 if streeingwheel have buttons diametr of wheels x2");
-System.out.println("Enter 5 to show Wheels with diametr and low");
-switch (sc.next()) {
-case "1":
-	One.cars1();
+		while (true) {
+			System.out.println("Enter 1 to find car by wheel diameter");
+			System.out.println("Enter 2 to find car by wheel diameter and body color");
+			System.out.println("Enter 3 to switch steering wheel in red cars");
+			System.out.println("Enter 4 to increase wheel diameter if SWheel has a buttons");
+			System.out.println("Enter 5 to");
+			switch (sc.next()) {
+			case "1":
+				task1();
+				break;
+			case "2":
+				task2();
+				break;
+			case "3":
+				task3();
+				break;
+			case "4":
+				task4();
+				break;
+			case "5":
+				task5();
+				break;
+			default:
+				sc.close();
+				return;
+			}
+		}
+	}
 
-break;
-case "2":
-	Two.cars2();
+	static void task1() {
+		System.out.println("Enter wheel diameter: ");
+		int diam = sc.nextInt();
+		for (Car car : list) {
+			if (car.getWheel().getDiameter() == diam) {
+				System.out.println(car);
+			}
+		}
+	}
 
-	break;
-case "3":
-	Three.cars3();
+	static void task2() {
+		System.out.println("Enter wheel diameter: ");
+		int diam = sc.nextInt();
+		System.out.println("Enter body color");
+		String color = sc.next();
+		for (Car car : list) {
+			if (car.getWheel().getDiameter() == diam && car.getBody().getColor() == color) {
+				System.out.println(car);
+			}
+		}
+	}
 
-	break;
-case "4":
-	Four.cars4();
+	static void task3() {
+		for (Car car : list) {
+			if (car.getBody().getColor().contains("red")) {
+				car.getSteeringWheel().setSize(1);
+				System.out.println(car.getBrand() + " have red color, Steering wheel size switched!");
+				System.out.println("See ya!");
+			}
+		}
+	}
 
-	break;
-case "5":
-	Five.cars5();
+	static void task4() {
+		for (Car car : list) {
+			if (car.getSteeringWheel().isButtons() == true) {
+				car.getWheel().setDiameter(car.getWheel().getDiameter() * 2);
+				System.out.println(car.getBrand() + " steering wheel have buttos, diameter wheel twiced!");
+			}
+		}
+	}
 
-	break;
-}
-}
+	static void task5() {
+		Car carr = new Car("Noname", new Body("transparent", "glass"), new Wheel(1, 10),
+				new SteeringWheel(0, "transparent", false));
+		System.out.println("Enter wheel diameter: ");
+		int diam = sc.nextInt();
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getWheel().getDiameter() < diam) {
+				System.out.println(i);
+				System.out.println(list.get(i).getBrand() + " with " + list.get(i).getWheel().getDiameter()
+						+ " of wheel diameter, will be changed to other car.");
+				list.remove(i);
+				list.add(carr);
+			}
+		}
+	}
 }
