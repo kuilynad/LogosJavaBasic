@@ -6,10 +6,21 @@ public class SteeringWheel {
 
 	private String color;
 
-	public SteeringWheel(int size, String color) {
+	private boolean buttons;
+	
+	public boolean isButtons() {
+		return buttons;
+	}
+
+	public void setButtons(boolean buttons) {
+		this.buttons = buttons;
+	}
+
+	public SteeringWheel(int size, String color, boolean buttons) {
 		super();
 		this.size = size;
 		this.color = color;
+		this.buttons = buttons;
 	}
 
 	public void changeColor(String color){
@@ -34,7 +45,7 @@ public class SteeringWheel {
 
 	@Override
 	public String toString() {
-		return "SteeringWheel [size=" + size + ", color=" + color + "]";
+		return "SteeringWheel [size=" + size + ", color=" + color + ", buttons=" + buttons + "]";
 	}
 	
 	
