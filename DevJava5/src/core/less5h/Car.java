@@ -19,12 +19,12 @@ public class Car {
 	}
 	
 	
-	public Car(String brand, String color, String material, int count, double diameter, int size, String color1) {
+	public Car(String brand, String color, String material, int count, double diameter, int size, String color1, boolean buttons) {
 		super();
 		this.brand = brand;
 		this.body = new Body(color1, material);
 		this.wheel = new Wheel(count, diameter);
-		this.steeringWheel = new SteeringWheel(size, color1);
+		this.steeringWheel = new SteeringWheel(size, color1, buttons);
 	}
 
 
