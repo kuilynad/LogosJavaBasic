@@ -1,4 +1,4 @@
-package core.less7h1;
+package core.less8h;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -33,26 +33,26 @@ public class Main {
 				new SteeringWheel(5, "black", false)));
 
 		while (true) {
-			System.out.println("Enter 1 to find car by wheel diameter");
-			System.out.println("Enter 2 to find car by wheel diameter and body color");
-			System.out.println("Enter 3 to switch steering wheel in red cars");
-			System.out.println("Enter 4 to increase wheel diameter if SWheel has a buttons");
-			System.out.println("Enter 5 to change cars with smaller wheel diameter");
+			System.out.println("Enter 1 to find car by body");
+			System.out.println("Enter 2 to ");
+			System.out.println("Enter 3 to ");
+			System.out.println("Enter 4 to ");
+			System.out.println("Enter 5 to ");
 			switch (sc.next()) {
 			case "1":
 				task1();
 				break;
 			case "2":
-				task2();
+				// task2();
 				break;
 			case "3":
-				task3();
+				// task3();
 				break;
 			case "4":
-				task4();
+				// task4();
 				break;
 			case "5":
-				task5();
+				// task5();
 				break;
 			default:
 				sc.close();
@@ -62,59 +62,24 @@ public class Main {
 	}
 
 	static void task1() {
-		System.out.println("Enter wheel diameter: ");
-		int diam = sc.nextInt();
+		System.out.println("Enter body material(alum, steel, carbon): ");
+		String bmat = sc.next();
 		for (Car car : list) {
-			if (car.getWheel().getDiameter() == diam) {
+			if (car.getBody().getMaterial().toLowerCase().contains(bmat.toLowerCase())) {
 				System.out.println(car);
 			}
 		}
 	}
 
 	static void task2() {
-		System.out.println("Enter wheel diameter: ");
-		int diam = sc.nextInt();
-		System.out.println("Enter body color");
-		String color = sc.next();
-		for (Car car : list) {
-			if (car.getWheel().getDiameter() == diam && car.getBody().getColor() == color) {
-				System.out.println(car);
-			}
-		}
+
 	}
 
 	static void task3() {
-		for (Car car : list) {
-			if (car.getBody().getColor().contains("red")) {
-				car.getSteeringWheel().setSize(1);
-				System.out.println(car.getBrand() + " have red color, Steering wheel size switched!");
-				System.out.println("See ya!");
-			}
-		}
+		System.out.println();
 	}
 
 	static void task4() {
-		for (Car car : list) {
-			if (car.getSteeringWheel().isButtons() == true) {
-				car.getWheel().setDiameter(car.getWheel().getDiameter() * 2);
-				System.out.println(car.getBrand() + " steering wheel have buttos, diameter wheel twiced!");
-			}
-		}
-	}
 
-	static void task5() {
-		Car carr = new Car("Noname", new Body("transparent", "glass"), new Wheel(1, 10, "summer"),
-				new SteeringWheel(0, "transparent", false));
-		System.out.println("Enter wheel diameter: ");
-		int diam = sc.nextInt();
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getWheel().getDiameter() < diam) {
-				System.out.println(i);
-				System.out.println(list.get(i).getBrand() + " with " + list.get(i).getWheel().getDiameter()
-						+ " of wheel diameter, will be changed to other car.");
-				list.remove(i);
-				list.add(carr);
-			}
-		}
 	}
 }

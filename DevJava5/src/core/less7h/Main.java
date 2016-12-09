@@ -17,19 +17,19 @@ public class Main {
 	private static final Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		list.add(new Car("Ferarri", new Body("red", "alum"), new Wheel(4, 21), new SteeringWheel(5, "black", true)));
-		list.add(new Car("Mclaren", new Body("orange", "alum"), new Wheel(4, 20), new SteeringWheel(4, "gray", true)));
-		list.add(new Car("BMW", new Body("yellow", "steel"), new Wheel(4, 18), new SteeringWheel(5, "black", false)));
-		list.add(new Car("Koenisegg", new Body("white", "carbon"), new Wheel(4, 22),
+		list.add(new Car("Ferarri", new Body("red", "alum"), new Wheel(4, 21, "winter"), new SteeringWheel(5, "black", true)));
+		list.add(new Car("Mclaren", new Body("orange", "alum"), new Wheel(4, 20, "summer"), new SteeringWheel(4, "gray", true)));
+		list.add(new Car("BMW", new Body("yellow", "steel"), new Wheel(4, 18, "summer"), new SteeringWheel(5, "black", false)));
+		list.add(new Car("Koenisegg", new Body("white", "carbon"), new Wheel(4, 22, "summer"),
 				new SteeringWheel(3, "white", true)));
-		list.add(new Car("Pagani", new Body("grey", "carbon"), new Wheel(4, 21), new SteeringWheel(6, "gray", true)));
-		list.add(new Car("Porshe", new Body("silver", "alum"), new Wheel(4, 19), new SteeringWheel(3, "black", false)));
-		list.add(new Car("Lamborgini", new Body("purple", "alum"), new Wheel(4, 20),
+		list.add(new Car("Pagani", new Body("grey", "carbon"), new Wheel(4, 21, "summer"), new SteeringWheel(6, "gray", true)));
+		list.add(new Car("Porshe", new Body("silver", "alum"), new Wheel(4, 19, "summer"), new SteeringWheel(3, "black", false)));
+		list.add(new Car("Lamborgini", new Body("purple", "alum"), new Wheel(4, 20, "summer"),
 				new SteeringWheel(4, "white", true)));
 		list.add(
-				new Car("Mersedes", new Body("black", "alum"), new Wheel(4, 18), new SteeringWheel(3, "brown", false)));
-		list.add(new Car("Nissan", new Body("blue", "steel"), new Wheel(4, 17), new SteeringWheel(2, "black", true)));
-		list.add(new Car("Mitsubishi", new Body("green", "steel"), new Wheel(4, 16),
+				new Car("Mersedes", new Body("black", "alum"), new Wheel(4, 18, "summer"), new SteeringWheel(3, "brown", false)));
+		list.add(new Car("Nissan", new Body("blue", "steel"), new Wheel(4, 17, "summer"), new SteeringWheel(2, "black", true)));
+		list.add(new Car("Mitsubishi", new Body("green", "steel"), new Wheel(4, 16, "summer"),
 				new SteeringWheel(5, "black", false)));
 
 		while (true) {
@@ -103,7 +103,7 @@ public class Main {
 	}
 
 	static void task5() {
-		Car carr = new Car("Noname", new Body("transparent", "glass"), new Wheel(1, 10),
+		Car carr = new Car("Noname", new Body("transparent", "glass"), new Wheel(1, 10, "summer"),
 				new SteeringWheel(0, "transparent", false));
 		System.out.println("Enter wheel diameter: ");
 		int diam = sc.nextInt();

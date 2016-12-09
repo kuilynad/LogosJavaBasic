@@ -5,11 +5,22 @@ public class Wheel {
 	private int count;
 	
 	private double diameter;
+	
+	private String season;
 
-	public Wheel(int count, double diameter) {
+	public Wheel(int count, double diameter, String season) {
 		super();
 		this.count = count;
 		this.diameter = diameter;
+		this.season = season;
+	}
+
+	public String getSeason() {
+		return season;
+	}
+
+	public void setSeason(String season) {
+		this.season = season;
 	}
 
 	public void changeDiameter(){
@@ -34,7 +45,7 @@ public class Wheel {
 
 	@Override
 	public String toString() {
-		return "Wheel [count=" + count + ", diameter=" + diameter + "]";
+		return "Wheel [count=" + count + ", diameter=" + diameter + ", season=" + season + "]";
 	}
 	
 	
