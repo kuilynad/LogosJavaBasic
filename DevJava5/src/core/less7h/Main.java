@@ -37,7 +37,7 @@ public class Main {
 			System.out.println("Enter 2 to find car by wheel diameter and body color");
 			System.out.println("Enter 3 to switch steering wheel in red cars");
 			System.out.println("Enter 4 to increase wheel diameter if SWheel has a buttons");
-			System.out.println("Enter 5 to");
+			System.out.println("Enter 5 to change cars with smaller wheel diameter");
 			switch (sc.next()) {
 			case "1":
 				task1();
