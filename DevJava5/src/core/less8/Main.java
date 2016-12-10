@@ -1,3 +1,4 @@
+
 package core.less8;
 
 import java.util.ArrayList;
@@ -102,4 +103,5 @@ public class Main {
 		}
 		list.forEach(System.out::println);
 	}
+
 }

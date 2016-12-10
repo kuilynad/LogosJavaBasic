@@ -9,7 +9,10 @@ public class Main {
 //		Wheel wheel = new Wheel(4, 17);
 //		Car car = new Car("Jeep", body, wheel, steeringWheel);
 //		System.out.println(car);
-		Car car = new Car("Koenisegg", new Body("purple", "carbon"), new Wheel(4, 20), new SteeringWheel(5, "red", true));
+
+
+		Car car = new Car("Koenisegg", new Body("purple", "carbon"), new Wheel(4, 20, "winter"), new SteeringWheel(5, "black", true));
+
 		System.out.println(car);
 		car.changeColor("red");
 		System.out.println(car);
