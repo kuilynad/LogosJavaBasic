@@ -74,6 +74,49 @@ public class Car {
 	public String toString() {
 		return "Car [brand=" + brand + ", body=" + body + ", wheel=" + wheel + ", steeringWheel=" + steeringWheel + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((body == null) ? 0 : body.hashCode());
+		result = prime * result + ((brand == null) ? 0 : brand.hashCode());
+		result = prime * result + ((steeringWheel == null) ? 0 : steeringWheel.hashCode());
+		result = prime * result + ((wheel == null) ? 0 : wheel.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Car other = (Car) obj;
+		if (body == null) {
+			if (other.body != null)
+				return false;
+		} else if (!body.equals(other.body))
+			return false;
+		if (brand == null) {
+			if (other.brand != null)
+				return false;
+		} else if (!brand.equals(other.brand))
+			return false;
+		if (steeringWheel == null) {
+			if (other.steeringWheel != null)
+				return false;
+		} else if (!steeringWheel.equals(other.steeringWheel))
+			return false;
+		if (wheel == null) {
+			if (other.wheel != null)
+				return false;
+		} else if (!wheel.equals(other.wheel))
+			return false;
+		return true;
+	}
 	
 	
 }

@@ -83,7 +83,7 @@ public class Main {
 		Iterator<Car> iter = list.iterator();
 		while (iter.hasNext()) {
 			Car car = iter.next();
-			if (car.getBody().getColor().toLowerCase().contains(col)) {
+			if (car.getBody().getColor().toLowerCase().equals(col)) {
 				iter.remove();
 			}
 		}
