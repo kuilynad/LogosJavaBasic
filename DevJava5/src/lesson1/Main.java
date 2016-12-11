@@ -28,7 +28,7 @@ public class Main {
 		double c = 4;
 		double D = (b*b - 4*a*c);
 		if (D<0){
-			System.out.println("Розвязки немає");
+			System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ");
 		}
 		else if (D>0) {
 			double x1 = (-b-Math.sqrt(D))/(2*a);
@@ -39,7 +39,7 @@ public class Main {
 			double x = -b/(2*a);
 			System.out.println("x = "+x);
 		}
-		//Ctrl+Shift+O імпорт недостающих класів.
+		//Ctrl+Shift+O !!!
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Number");
