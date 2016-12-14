@@ -23,12 +23,12 @@ public class Main {
 				break;
 			case "2":
 				System.out.println("Enter name of item: ");
-				String name = sc.next();
-				f.deleteItem(name);
+				String name = sc.next();			
+					f.deleteItem(name);
 				break;
 			case "3":
 				System.out.println("Enter name item to replace: ");
-				String name1 = sc.nextLine();
+				String name1 = sc.next();
 				f.replaceItem(name1);
 				break;
 			case "4":
@@ -39,19 +39,19 @@ public class Main {
 				System.out.println("Press 0 to Exit");
 				switch (sc.next()) {
 				case "1":
-					f.sortByName();
+					f.sortByName().forEach(System.out::println);
 					break;
 				case "2":
-					f.sortByWeigh();
+					f.sortByWeigh().forEach(System.out::println);
 					break;
 				case "3":
-					f.sortByVolume();
+					f.sortByVolume().forEach(System.out::println);
 					break;
 				case "4":
-					f.sortByPrice();
+					f.sortByPrice().forEach(System.out::println);
 					break;
 				case "0":
-					
+
 					return;
 
 				default:
