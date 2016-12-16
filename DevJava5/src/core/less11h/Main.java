@@ -76,5 +76,5 @@ public class Main {
 //		Animal a = new Animal(animalName, AnimalType);
 //		return a;
 //	}
-
+//taki dila
 }
