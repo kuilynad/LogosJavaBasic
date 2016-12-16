@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Main {
 
 	private static final Scanner sc = new Scanner(System.in);
-	private static final Object AnimalType = null;
 
 	public static void main(String[] args) throws IOException {
 		Zooclub z = new Zooclub();
