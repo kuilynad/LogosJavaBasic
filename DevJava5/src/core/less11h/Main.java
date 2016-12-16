@@ -26,12 +26,12 @@ public class Main {
 				z.addMember(createMember());
 				System.out.println("Member is created");
 				break;
-			case "2":
-				z.addAnimalToMember(createMember(), createAnimal());
-				break;
-			case "3":
-				z.removeAnimalfromMember(createMember(), createAnimal());
-				break;
+//			case "2":
+//				z.addAnimalToMember(createMember(), createAnimal());
+//				break;
+//			case "3":
+//				z.removeAnimalfromMember(createMember(), createAnimal());
+//				break;
 			case "4":
 				z.removeMember(createMember());
 				break;
@@ -60,21 +60,21 @@ public class Main {
 		return h;
 	}
 
-	public static Animal createAnimal() {
-		System.out.println("Enter name:");
-		String animalName = sc.next();
-		System.out.println("enter age");
-		String type = sc.nextLine();
-		
-		AnimalType[] type1 = AnimalType.values();
-		
-		for (AnimalType typeOfAnimal2 : type1) {
-			if(typeOfAnimal2.name().equals(AnimalType)){
-				type = typeOfAnimal;
-			}
-			
-		Animal a = new Animal(animalName, AnimalType);
-		return a;
-	}
+//	public static Animal createAnimal() {
+//		System.out.println("Enter name:");
+//		String animalName = sc.next();
+//		System.out.println("enter age");
+//		String type = sc.nextLine();
+//		
+//		AnimalType[] type1 = AnimalType.values();
+//		
+//		for (AnimalType typeOfAnimal2 : type1) {
+//			if(typeOfAnimal2.name().equals(AnimalType)){
+//				type = typeOfAnimal;
+//			}
+//			
+//		Animal a = new Animal(animalName, AnimalType);
+//		return a;
+//	}
 
 }
