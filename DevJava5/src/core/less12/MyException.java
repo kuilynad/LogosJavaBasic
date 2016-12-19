@@ -6,6 +6,6 @@ public class MyException extends RuntimeException{
 
 	@Override
 	public void printStackTrace() {
-		System.err.println("Шукай сам де і чого помилка");
+		System.err.println("Find it yourself!");
 	}
 }
