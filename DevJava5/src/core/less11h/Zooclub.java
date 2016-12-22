@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -74,11 +75,13 @@ public void addAnimalToMember(Human human,Animal a){
 	}
 	
 	public void deleteTypeAnimal(String type){
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
 		Set<Entry<Human,List<Animal>>> set = map.entrySet();
 		Iterator<Animal> iter= list.iterator();
 		
 		while(iter.hasNext()){
-			if(iter.next().getType().name().equalsIgnoreCase(type)){
+			if(AnimalType.valueOf(sc.next().toUpperCase()).equals(AnimalType.valueOf(type))){
 				iter.remove();
 			}
 		}
@@ -89,4 +92,9 @@ public void addAnimalToMember(Human human,Animal a){
 	public String toString() {
 		return "Zooclub [map=" + map + "]";
 	}
+
+	public void deleteTypeAnimal(AnimalType type) {
+		
+	}
+
 }

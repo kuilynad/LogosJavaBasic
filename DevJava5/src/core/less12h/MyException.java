@@ -6,7 +6,7 @@ public class MyException extends RuntimeException {
 	
 	@Override
 	public void printStackTrace() {
-		System.err.println("Bla-bla-bla!");
+		System.err.println("Bla-bla-bla!Find it!");
 	}
 
 	
