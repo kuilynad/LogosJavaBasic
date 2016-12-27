@@ -10,8 +10,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		MyMap<String, List<Integer>> myMap = new MyMap<>();
-		List<Integer> list = new ArrayList<>();
+		MyMap<String, String> myMap = new MyMap<>();
+//don`t use it List<Integer> list = new ArrayList<>();
 
 		while (true) {
 			System.out.println("Enter 1 to add somesing");
@@ -25,8 +25,8 @@ public class Main {
 				System.out.println("Enter key");
 				String key = sc.next();
 				System.out.println("Enter value");
-				list.add(sc.nextInt());
-				myMap.addSome(key, list);
+				String value = sc.next();
+				myMap.addSome(key, value);
 				break;
 			case "2":
 				System.out.println("Enter key");
@@ -35,7 +35,7 @@ public class Main {
 			case "3":
 				System.out.println("Enter value to set value null");
 				System.out.println("Enter value");
-//				myMap.deleteSomeValue(sc.next());
+				myMap.deleteSomeValue(sc.next());
 				break;
 			case "4":
 				System.out.println("Show all keys");
