@@ -10,6 +10,7 @@ import java.util.Set;
 public class MyMap<K, V> {
 
 	private static final Scanner sc = new Scanner(System.in);
+	
 	Set<MyEntry<K, V>> set = new HashSet<>();
 	
 	public void addSome(K key, V value) {
@@ -29,10 +30,9 @@ public class MyMap<K, V> {
 			}
 		}
 		System.out.println(set);
-//		sc.close();
 	}
 	
-	public void deleteSomeValue(V value){
+	public void deleteSomeValue(String string){
 		System.out.println("Delete something by value");
 		System.out.println("Enter value: ");
 		Iterator<MyEntry<K, V>> iter = set.iterator();
@@ -40,11 +40,9 @@ public class MyMap<K, V> {
 			MyEntry<K, V> next = iter.next();
 			if(next.getValue().equals(sc.next())){
 				next.setValue(null);
-//				iter.remove();
 			}
 		}
 		System.out.println(set);
-//		sc.close();
 	}
 	
 	public void getKeys(){
