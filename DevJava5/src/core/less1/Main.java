@@ -48,4 +48,5 @@ public class Main {
 	static void print(int a){
 		System.out.println((char)a+" "+a);
 	}
+	//test
 }
